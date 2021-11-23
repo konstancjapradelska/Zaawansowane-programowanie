@@ -13,7 +13,7 @@ class HelloWorld(Resource):
         return read(path)
 
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '/movies')
 
 if __name__ == '__main__':
     app.run(debug=True)

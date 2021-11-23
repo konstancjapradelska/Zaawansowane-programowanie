@@ -1,10 +1,9 @@
 import csv
 from Movie import Movie
 
-file = open('movies.csv', encoding="utf8")
-
 
 def read(path):
+    file = open(path, encoding="utf8")
     type(file)
     csvreader = csv.reader(file)
     next(csvreader)
