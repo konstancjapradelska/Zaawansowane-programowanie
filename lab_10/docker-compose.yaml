@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  app:&&
+    image: python:3.10-alpine
+    command: /bin/sh -c "python main.py"
+    ports:
+      - 5000:5000
+    working_dir: /app
+    volumes:
+      - .:/app
+
+
+#docker-compose.yaml
+#docker-compose up -d -> uruchamianie kontenerow
+#docker-compose up -d --build -> uruchamianie kontenerow oraz przebudowanie
+#docker-compose ps -> sprawdzenie stanu kontenerow
+#docker-compose exec app /bin/sh -? wchodzenie do kontenera
+
+
