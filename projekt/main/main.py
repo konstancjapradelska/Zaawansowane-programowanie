@@ -16,7 +16,6 @@ image = imutils.resize(image,
 (humans, weights) = hog.detectMultiScale(image, winStride=(4, 4),
                                          padding=(8, 8), scale=1.07)
 
-
 # Number of humans on image
 print(f'Wykryto ludzi: {len(humans)}')
 
