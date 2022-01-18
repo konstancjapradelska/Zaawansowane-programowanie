@@ -6,17 +6,17 @@ hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 # Reading the Image
-image = cv2.imread('./images/humans1.jpg')
+image = cv2.imread('./images/humans2.jpg')
 
 # Resizing the Image
 image = imutils.resize(image,
                        width=min(600, image.shape[1]))
 
 # Detecting all humans
-(humans, _) = hog.detectMultiScale(image,
-                                   winStride=(4, 4),
-                                   padding=(8, 8),
-                                   scale=1.07)
+(humans, weights) = hog.detectMultiScale(image, winStride=(4, 4),
+                                         padding=(8, 8), scale=1.07)
+
+
 # Number of humans on image
 print(f'Wykryto ludzi: {len(humans)}')
 
